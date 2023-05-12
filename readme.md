@@ -25,7 +25,7 @@
 
 ## 과제 설명
 
-### Code States Movie Top 10 Client
+### Client
 
 - Code States Movie Top 10 클라이언트 코드가 React로 이미 작성되어 있습니다.
 - 하드코딩된 데이터가 동적으로 렌더링 될 수 있도록 코드를 작성합니다.
@@ -45,7 +45,7 @@ Bare Minimum Requirements - client 테스트를 모두 통과하세요.
     - movieDataApi.js를 이용하여 데이터를 직접 가져옵니다.
 
 
-### Code States Movie Top 10 Server
+### Server
 
 - 클라이언트 앱에서 이용한 영화 정보 조회용 서버를 직접 구현합니다.
 - 다음 REST API를 구현해야 합니다.
