@@ -1,0 +1,21 @@
+{
+  "name": "im-ha-section-2-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest ./__tests__/ServerSpec.test.js --runInBand",
+    "report": "NODE_ENV=test jest ./__tests__/ServerSpec.test.js --json --forceExit --outputFile=report.jest.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.1.1",
+    "supertest": "^6.1.6"
+  }
+}
