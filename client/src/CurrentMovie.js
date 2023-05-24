@@ -1,7 +1,6 @@
 // TODO: 하드코딩된 데이터를 동적으로 렌더링 되도록 다시 작성합니다.
 
 export default function CurrentMovie({ movie }) {
-  console.log(movie);
   return (
     <>
       {movie === null ? (

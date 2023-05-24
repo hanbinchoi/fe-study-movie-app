@@ -1,8 +1,11 @@
 // TODO: 하드코딩된 데이터를 동적으로 렌더링 되도록 다시 작성합니다.
 
-export default function MovieRankListEntry({ movie }) {
+export default function MovieRankListEntry({
+  movie,
+  onClick,
+}) {
   return (
-    <div className="card">
+    <div className="card" onClick={() => onClick(movie)}>
       <div style={{ flex: 3 }}>
         <img
           width="100%"
