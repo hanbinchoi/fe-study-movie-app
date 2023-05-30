@@ -2,12 +2,16 @@
 
 export default function MovieRankListEntry({
   movie,
-  onClick,
+  handleCardClick,
 }) {
   return (
-    <div className="card" onClick={() => onClick(movie)}>
+    <div
+      className="card"
+      onClick={() => handleCardClick(movie)}
+    >
       <div style={{ flex: 3 }}>
         <img
+          alt={"movie.title"}
           width="100%"
           height="100%"
           src={movie.medium_cover_image}

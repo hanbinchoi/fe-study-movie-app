@@ -1,6 +1,9 @@
 import MovieRankListEntry from "./MovieRankListEntry";
 
-export default function MovieRankList({ movies, onClick }) {
+export default function MovieRankList({
+  movies,
+  handleCardClick,
+}) {
   return (
     <div className="right-movie-list">
       <div className="card-list">
@@ -16,7 +19,7 @@ export default function MovieRankList({ movies, onClick }) {
               <MovieRankListEntry
                 key={movie.id}
                 movie={movie}
-                onClick={onClick}
+                handleCardClick={handleCardClick}
               />
             ))}
       </div>

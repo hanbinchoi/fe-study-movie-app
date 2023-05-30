@@ -5,14 +5,16 @@ import CurrentMovie from "./CurrentMovie";
 import { getMovies } from "./api/movieDataApi";
 
 // 기본값으로 주어지는 영화 목록은 다음을 이용하세요.
-import mockMovie from "./static/mockMovie";
+// import mockMovie from "./static/mockMovie";
 export const App = () => {
   const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState({});
-  getMovies().then((data) => {
-    setMovies(data);
-    setMovie(data[0]);
-  });
+  const [movie, setMovie] = useState(null);
+  useEffect(() => {
+    getMovies().then((data) => {
+      setMovies(data);
+      setMovie(data[0]);
+    });
+  }, []);
   const handleCardClick = (select) => {
     // TODO: 현재 선택한 영화가 바뀌어야 합니다
     setMovie(select);
@@ -27,7 +29,7 @@ export const App = () => {
       <div className="body">
         <CurrentMovie movie={movie} />
         <MovieRankList
-          onClick={handleCardClick}
+          handleCardClick={handleCardClick}
           movies={movies}
         />
       </div>
