@@ -11,6 +11,7 @@ export const App = () => {
   const [movie, setMovie] = useState(null);
   useEffect(() => {
     getMovies().then((data) => {
+      console.log(data);
       setMovies(data);
       setMovie(data[0]);
     });
@@ -28,10 +29,7 @@ export const App = () => {
       </div>
       <div className="body">
         <CurrentMovie movie={movie} />
-        <MovieRankList
-          handleCardClick={handleCardClick}
-          movies={movies}
-        />
+        <MovieRankList handleCardClick={handleCardClick} movies={movies} />
       </div>
     </>
   );
